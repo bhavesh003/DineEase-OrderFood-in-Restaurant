@@ -1,0 +1,102 @@
+@media (max-width: 1080px) {
+  .login-page-child {
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 35px;
+    border-radius: 191px;
+    /* width: 313px; */
+    /* height: 309px; */
+    object-fit: cover;
+  }
+  .login {
+    position: absolute;
+    top: 330px;
+    left: 89px;
+    font-size: var(--font-size-lg);
+    font-weight: 100;
+  }
+  .login-page-item {
+    position: absolute;
+    top: 366px;
+    left: 50px;
+    border-radius: var(--br-21xl);
+    background-color: var(--color-orangered);
+    box-shadow: 0 4px 4px rgba(195, 63, 21, 0.1);
+    width: 134px;
+    height: 3px;
+  }
+  .login-page-inner,
+  .mobile-number {
+    position: absolute;
+    top: 431px;
+    left: 50px;
+  }
+  .login-page-inner {
+    border: 0;
+    font-family: var(--font-inter);
+    font-size: var(--font-size-mid);
+    background-color: transparent;
+    width: 314px;
+    height: 59px;
+  }
+  .mobile-number {
+    margin: 0;
+    font-size: inherit;
+    font-weight: 400;
+    font-family: inherit;
+    opacity: 0.4;
+  }
+  .frame-input,
+  .otp {
+    position: absolute;
+    top: 536px;
+    left: 50px;
+  }
+  .frame-input {
+    border: 0;
+    font-weight: 100;
+    font-family: var(--font-inter);
+    font-size: var(--font-size-mid);
+    background-color: transparent;
+    width: 314px;
+    height: 59px;
+    overflow-y: auto;
+  }
+  .otp {
+    opacity: 0.4;
+  }
+  .login1,
+  .rectangle-button {
+    position: absolute;
+    cursor: pointer;
+  }
+  .rectangle-button {
+    border: 0;
+    padding: 0;
+    background-color: var(--color-orangered);
+    top: 657px;
+    left: 48px;
+    border-radius: var(--br-11xl);
+    width: 314px;
+    height: 70px;
+  }
+  .login1 {
+    top: 682px;
+    left: 170px;
+    font-size: var(--font-size-xl);
+    color: var(--color-whitesmoke-100);
+  }
+  .login-page {
+    position: relative;
+    border-radius: var(--br-xl);
+    background-color: var(--color-whitesmoke-500);
+    width: 100%;
+    height: 896px;
+    overflow-y: auto;
+    text-align: left;
+    font-size: var(--font-size-mini);
+    color: var(--color-black);
+    font-family: var(--font-inter);
+  }
+}

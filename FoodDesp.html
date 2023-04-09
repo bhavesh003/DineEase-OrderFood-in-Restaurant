@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+  <link rel="stylesheet" href="global.css" />
+  <link rel="stylesheet" href="FoodDesp.css" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,400;0,600;0,700;1,600&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" />
+</head>
+
+<body>
+
+  <!-- <button class="shopping-cart" id="shoppingCart">
+    <img class="cart-icon" alt="shopping cart icon" src="public/vector2.png" />
+  </button> -->
+
+  <div class="food-desp">
+    <img class="back-icon" alt="back button" id="back-icon" src="public/chevronleft.svg" />
+    <img class="dish-photo" alt="" src="public/mask-group1@2x.png" />
+    <div class="dish-name">Veggie tomato mix</div>
+    <div class="dish-despcription">Dish Despcription</div>
+    <div class="dish-despcription-details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, facilis!</div>
+    <b class="dish-price">Rs 400</b>
+    <button class="addtocart-btn" id="addtocart-btn"></button>
+    <b class="addtocart-text" id="addtocart-text">Add to cart</b>
+  </div>
+
+  <script>
+    var dish = document.getElementById("back-icon");
+    if (dish) {
+      dish.addEventListener("click", function (e) {
+        window.location.href = "HomePage.html";
+      });
+    }
+
+    var dish = document.getElementById("addtocart-btn");
+    if (dish) {
+      dish.addEventListener("click", function (e) {
+        window.location.href = "Cart.html";
+      });
+    }
+    var dish = document.getElementById("addtocart-text");
+    if (dish) {
+      dish.addEventListener("click", function (e) {
+        window.location.href = "Cart.html";
+      });
+    }
+
+  </script>
+</body>
+
+</html>

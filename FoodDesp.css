@@ -1,0 +1,90 @@
+.back-icon {
+  position: absolute;
+  top: 60px;
+  left: 41px;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+}
+.dish-photo {
+  position: absolute;
+  top: 82px;
+  left: 25px;
+  width: 360px;
+  height: 369px;
+  object-fit: cover;
+}
+.dish-name {
+  position: absolute;
+  top: 426px;
+  left: 48px;
+  font-size: var(--font-size-9xl);
+  display: inline-block;
+  width: 318px;
+  height: 52px;
+}
+.dish-despcription {
+  position: absolute;
+  top: 533px;
+  left: 53px;
+  text-align: left;
+}
+.dish-despcription-details,
+.dish-price {
+  position: absolute;
+  display: inline-block;
+}
+
+.dish-despcription-details {
+  border: 0;
+  background-color: transparent;
+  font-family: var(--font-inter);
+  font-size: var(--font-size-mini);
+  top: 560px;
+  left: 53px;
+  letter-spacing: 0.02em;
+  line-height: 138.84%;
+  color: var(--color-black);
+  text-align: left;
+  width: 297px;
+  opacity: 0.5;
+}
+.dish-price {
+  top: 478px;
+  left: 98px;
+  font-size: var(--font-size-xl);
+  color: var(--color-orangered);
+  width: 206px;
+  height: 39px;
+}
+.addtocart-btn {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: var(--color-orangered);
+  position: absolute;
+  top: 785px;
+  left: 50px;
+  border-radius: var(--br-11xl);
+  width: 314px;
+  height: 70px;
+}
+.addtocart-text {
+  position: absolute;
+  top: 810px;
+  left: 160px;
+  color: var(--color-whitesmoke-100);
+  text-align: left;
+}
+.food-desp {
+  position: relative;
+  border-radius: var(--br-xl);
+  background-color: var(--color-whitesmoke-100);
+  width: 100%;
+  height: 896px;
+  overflow: hidden;
+  text-align: center;
+  font-size: var(--font-size-mid);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}

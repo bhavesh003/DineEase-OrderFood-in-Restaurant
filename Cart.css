@@ -1,0 +1,144 @@
+@media (max-width: 600px) {
+
+  .cart1 {
+    position: absolute;
+    text-align: left;
+    top: 30px;
+    left: 188px;
+    font-size: var(--font-size-lg);
+    font-weight: 500;
+  }
+
+  .cart-child {
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: var(--color-orangered);
+    position: relative;
+    border-radius: var(--br-11xl);
+    width: 314px;
+    height: 70px;
+    font-size: 25px;
+    top: 70px;
+    left: 52px;
+    color: var(--color-whitesmoke-100);
+  }
+
+  .total-bill-rs {
+    position: relative;
+    text-align: start;
+    top: 50px;
+    left: 60px;
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    /* display: inline-block; */
+    width: 300px;
+    height: 30px;
+    /* background-color: blue; */
+  }
+
+  .back-icon {
+    position: absolute;
+    top: 30px;
+    left: 41px;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+  }
+
+  
+
+  .cart {
+    position: absolute;
+    /* border-radius: var(--br-xl); */
+    /* height: 896px; */
+    width: 100%;
+    text-align: center;
+    align-content: center;
+    font-size: var(--font-size-mid);
+    color: var(--color-black);
+    font-family: var(--font-inter);
+    /* background-color: black; */
+  }
+
+  .dish-details {
+    position: absolute;
+
+    width: 195px;
+    height: 262px;
+  }
+
+  .dish {
+    position: relative;
+    border: solid 1px #6e6969;
+    /* top: 15px; */
+    left: 52px;
+    margin: 4px;
+    border-radius: var(--br-11xl);
+    width: 308px;
+    height: 101px;
+    background-color: rgb(248, 245, 245);
+  }
+
+  .dish-icon {
+    position: absolute;
+    align-content: center;
+    border-radius: 80%;
+    height: 140px;
+    left: -15px;
+    top: 6px;
+    width: 140px;
+    object-fit: cover;
+    /* background-color: blue*/
+  }
+
+  .dish-name {
+    text-align: center;
+    position: absolute;
+    top: 18px;
+    left: 93px;
+    line-height: 105.34%;
+    font-weight: 126px;
+    width: 220px;
+    height: 40px;
+  }
+
+  .dish-price {
+    text-align: start;
+    position: absolute;
+    top: 54px;
+    left: 125px;
+    font-size: var(--font-size-mid);
+    color: var(--color-orangered);
+    width: 100px;
+    /* height: 18px; */
+    /* background-color: black; */
+  }
+
+  .b1,
+  .b2,
+  .b {
+    left: 90px;
+    background-color: rgb(198, 215, 135);
+    border: none;
+    color: black;
+    position: relative;
+    top: 54px;
+  }
+
+  .cart-foodmenusection {
+    position: absolute;
+    margin: 15px;
+    left: -12px;
+    top: 58px;
+    width: 410px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    /* background-color: black; */
+  }
+
+  
+
+
+}

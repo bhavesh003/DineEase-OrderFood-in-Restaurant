@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+  <link rel="stylesheet" href="global.css" />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,400;0,600;0,700;1,600&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" />
+</head>
+
+<body>
+  <div class="login-page">
+    <!-- <img class="login-page-child" alt="" src="./public/rectangle-3@2x.png" /> -->
+    <div class="login">Login</div>
+    
+    <div class="login-page-item"></div>
+    <input class="login-page-inner" type="number" min="{10}" max="{10}" required />
+
+
+    <h2 class="mobile-number">Mobile Number</h2>
+    
+    <input class="frame-input" type="number" max="{4}" required />
+    
+    <div class="otp">OTP</div>
+    
+    <button class="rectangle-button" id="rectangleButton"></button>
+    <b class="login1" id="loginText1">Login</b>
+  </div>
+
+  <script>
+    var rectangleButton = document.getElementById("rectangleButton");
+    if (rectangleButton) {
+      rectangleButton.addEventListener("click", function (e) {
+        window.location.href = "HomePage.html";
+      });
+    }
+
+    var loginText1 = document.getElementById("loginText1");
+    if (loginText1) {
+      loginText1.addEventListener("click", function (e) {
+        window.location.href = "HomePage.html";
+      });
+    }
+  </script>
+</body>
+
+</html>
