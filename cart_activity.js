@@ -1,25 +1,36 @@
-const minusButton = document.querySelector(".minus");
-const quantityButton = document.querySelector(".quantity");
-const plusButton = document.querySelector(".plus");
-const priceElement = document.querySelector(".dish-price");
-const totalPriceElement = document.querySelector(".price");
+const items = document.querySelectorAll(".dish");
+const totalPriceElement = document.querySelector(".total-price");
 
-minusButton.addEventListener("click", function () {
-    let quantity = parseInt(quantityButton.textContent);
-    if (quantity > 0) {
-        quantity--;
-        quantityButton.textContent = quantity;
-        let price = parseInt(priceElement.textContent);
-        let totalPrice = price * quantity;
-        totalPriceElement.textContent = totalPrice;
-    }
-});
-
-plusButton.addEventListener("click", function () {
-    let quantity = parseInt(quantityButton.textContent);
-    quantity++;
-    quantityButton.textContent = quantity;
-    let price = parseInt(priceElement.textContent);
-    let totalPrice = price * quantity;
+function updateTotalPrice() {
+    let totalPrice = 0;
+    items.forEach(function (item) {
+        let price = parseInt(item.querySelector(".dish-price").textContent);
+        let quantity = parseInt(item.querySelector(".quantity").textContent);
+        let itemTotalPrice = price * quantity;
+        item.querySelector(".price").textContent = itemTotalPrice;
+        totalPrice += itemTotalPrice;
+    });
     totalPriceElement.textContent = totalPrice;
+}
+
+items.forEach(function (item) {
+    item.querySelector(".minus").addEventListener("click", function () {
+        let quantity = parseInt(item.querySelector(".quantity").textContent);
+        if (quantity > 0) {
+            quantity--;
+            item.querySelector(".quantity").textContent = quantity;
+            updateTotalPrice();
+        }
+    });
+
+    item.querySelector(".plus").addEventListener("click", function () {
+        let quantity = parseInt(item.querySelector(".quantity").textContent);
+        quantity++;
+        item.querySelector(".quantity").textContent = quantity;
+        updateTotalPrice();
+    });
 });
+
+updateTotalPrice();
+
+
