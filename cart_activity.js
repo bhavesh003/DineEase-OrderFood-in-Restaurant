@@ -7,10 +7,10 @@ function updateTotalPrice() {
         let price = parseInt(item.querySelector(".dish-price").textContent);
         let quantity = parseInt(item.querySelector(".quantity").textContent);
         let itemTotalPrice = price * quantity;
-        item.querySelector(".price").textContent = itemTotalPrice;
+        item.querySelector(".price").textContent ="Total : "+itemTotalPrice;
         totalPrice += itemTotalPrice;
     });
-    totalPriceElement.textContent = totalPrice;
+    totalPriceElement.textContent = "Total : " +totalPrice;
 }
 
 items.forEach(function (item) {

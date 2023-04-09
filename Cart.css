@@ -19,22 +19,27 @@
     width: 314px;
     height: 70px;
     font-size: 25px;
-    top: 70px;
+    top: 40px;
     left: 52px;
     color: var(--color-whitesmoke-100);
   }
 
   .total-bill-rs {
+    margin-top: 10px;
+    cursor: pointer;
+    border: 0;
+    padding: 10px;
+    background-color: #80ed99;
     position: relative;
-    text-align: start;
-    top: 50px;
-    left: 60px;
+    border-radius: var(--br-11xl);
+    font-size: 20px;
+    width: 250px;
+    top: 57px;
+    height: 25px;
     font-size: var(--font-size-xl);
-    font-weight: 600;
-    /* display: inline-block; */
-    width: 300px;
-    height: 30px;
-    /* background-color: blue; */
+    left: 77px;
+    /* font-weight: 600; */
+    border: 1px solid #80ed99;
   }
 
   .back-icon {
@@ -106,38 +111,61 @@
   .dish-price {
     text-align: start;
     position: absolute;
-    top: 54px;
-    left: 125px;
+    top: 46px;
+    left: 128px;
     font-size: var(--font-size-mid);
     color: var(--color-orangered);
     width: 100px;
     /* height: 18px; */
     /* background-color: black; */
   }
+  .price{
+    text-align: start;
+    position: absolute;
+    top: 55px;
+    left: 128px;
+    font-size: var(--font-size-mid);
+    color: var(--color-orangered);
+    width: 100px;
+  }
 
   .b1,
   .b2,
   .b {
-    left: 90px;
-    background-color: rgb(198, 215, 135);
+    left: 95px;
+    background-color: #80ed99;
     border: none;
     color: black;
     position: relative;
-    top: 54px;
+    top: 42px;
   }
-
   .cart-foodmenusection {
     position: absolute;
     margin: 15px;
     left: -12px;
     top: 58px;
     width: 410px;
-    height: auto;
+    height: 600px;
     display: flex;
     flex-wrap: wrap;
     /* background-color: black; */
+    overflow-x: hidden;
+    overflow-y: scroll;
+    /* white-space: nowrap; */
+    /* z-index: 1; */
   }
 
+  .bottomsection{
+    /* background-color: blue; */
+    position: fixed;
+    margin: 15px;
+    left: -12px;
+    top: 610px;
+    width: 400px;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+  }
   
 
 
