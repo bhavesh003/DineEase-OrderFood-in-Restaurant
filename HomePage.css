@@ -36,10 +36,12 @@
   }
 
   .foodmenusection {
+    /* background-color: blue; */
     position: absolute;
     margin: 15px;
     top: 205px;
-    width: 100%;
+    /* width: 100%; */
+    width: 400px;
     height: auto;
     display: flex;
     flex-wrap: wrap;
