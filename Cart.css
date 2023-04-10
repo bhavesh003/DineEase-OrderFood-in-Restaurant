@@ -1,5 +1,9 @@
 @media (max-width: 600px) {
 
+  body{
+    background-color: rgb(242, 242, 242);
+  }
+  
   .cart1 {
     position: absolute;
     text-align: left;
@@ -153,6 +157,7 @@
     overflow-y: scroll;
     /* white-space: nowrap; */
     /* z-index: 1; */
+    
   }
 
   .bottomsection{

@@ -10,6 +10,9 @@
     opacity: 0.5;
   }
 
+  body{
+    background-color: rgb(242, 242, 242);
+  }
   .chevron-left-icon2 {
       position: absolute;
       top: 30px;

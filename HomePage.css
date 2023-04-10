@@ -1,8 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Roboto&family=Source+Sans+3&display=swap');
+
 @media (max-width: 600px) {
 
-  .body{
-    height: 100px;
-    height: 100px;
+
+  *{
+    font-family: 'Poppins', sans-serif;
+  }
+
+  body{
+    background-color: rgb(242, 242, 242);
   }
   .hotel-name {
     z-index: 4;
@@ -15,11 +21,12 @@
     font-weight: 600;
     width: 300px;
     color: #6e6969;
+    /* font-family: 'Poppins', sans-serif; */
   }
 
   .search-icon {
     position: absolute;
-    top: 21px;
+    top: 18px;
     left: 18px;
     width: 30px;
     cursor: pointer;
@@ -78,6 +85,7 @@
     position: absolute;
     top: 165px;
     left: 0px;
+    font-family: 'Poppins', sans-serif;
     line-height: 105.34%;
     font-weight: 200 solid;
     font-size: 18px;
@@ -92,8 +100,10 @@
     position: absolute;
     top: 198px;
     left: 62px;
+    font-family: 'Poppins', sans-serif;
     font-size: var(--font-size-mid);
-    color: var(--color-orangered);
+    /* color: var(--color-orangered); */
+    color: rgb(6, 115, 6);
     width: 60px;
     height: 18px;
   }
@@ -116,8 +126,20 @@
     color: #6e6969;
   }
 
+  .nav-item a {
+    cursor: pointer; /* Add cursor property to make it pointer */
+    text-decoration: none; /* Remove underline from anchor links */
+    color: #000; /* Add color to anchor links */
+  }
+ 
+  .nav-item a {
+    position: relative;
+    text-decoration: none;
+  }
+
+
   .f-category:hover {
-    background-color: #6e6969;
+    background-color: #625a5a;
   }
 
   mark {
@@ -165,7 +187,7 @@
   .cart-child {
     text-align: center;
     cursor: pointer;
-    border: 1.5px black solid;
+    border: 1.5px orangered solid;
     padding: 0;
     background-color: var(--color-orangered);
     position: relative;
