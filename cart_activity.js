@@ -4,14 +4,22 @@ const totalPriceElement = document.querySelector(".total-price");
 function updateTotalPrice() {
     let totalPrice = 0;
     items.forEach(function (item) {
-        let price = parseInt(item.querySelector(".dish-price").textContent);
+        let price = item.querySelector(".dish-price").textContent;
+        let price1 = price.slice(3,6);
+        // console.log(price1);
         let quantity = parseInt(item.querySelector(".quantity").textContent);
-        console.log(price, quantity);
-        let itemTotalPrice = price * quantity;
-        item.querySelector(".item.price").textContent = "Total : " + itemTotalPrice;
+        // console.log(price1, quantity);
+        let itemTotalPrice = price1 * quantity;
+        // console.log(itemTotalPrice);
+        item.querySelector(".price").textContent = "Total : " + itemTotalPrice;
         totalPrice += itemTotalPrice;
+        console.log(totalPrice);
     });
-    totalPriceElement.textContent = "Total : " + totalPrice;
+  let totalprice1 =document.getElementsByClassName(".total-bill-rs");
+  console.log(totalprice1);
+    // let totalPriceElement = document.getElementsByClassName(".total-bill-rs"); // Get the total price element by its ID
+    totalPriceElement.textContent = "Total : " + totalPrice; // Set the total price as text content
+
 }
 
 items.forEach(function (item) {

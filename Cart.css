@@ -35,6 +35,7 @@
     border: 0;
     padding: 10px;
     background-color: #80ed99;
+    /* color: ; */
     position: relative;
     border-radius: var(--br-11xl);
     font-size: 20px;
