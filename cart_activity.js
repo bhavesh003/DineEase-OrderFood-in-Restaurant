@@ -6,12 +6,12 @@ function updateTotalPrice() {
     items.forEach(function (item) {
         let price = parseInt(item.querySelector(".dish-price").textContent);
         let quantity = parseInt(item.querySelector(".quantity").textContent);
-        console.log(price ,quantity);
+        console.log(price, quantity);
         let itemTotalPrice = price * quantity;
-        item.querySelector(".item.price").textContent ="Total : "+itemTotalPrice;
+        item.querySelector(".item.price").textContent = "Total : " + itemTotalPrice;
         totalPrice += itemTotalPrice;
     });
-    totalPriceElement.textContent = "Total : " +totalPrice;
+    totalPriceElement.textContent = "Total : " + totalPrice;
 }
 
 items.forEach(function (item) {
@@ -33,5 +33,4 @@ items.forEach(function (item) {
 });
 
 updateTotalPrice();
-
 

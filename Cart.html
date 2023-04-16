@@ -6,6 +6,7 @@
   <meta name="viewport" content="initial-scale=1, width=device-width" />
   <link rel="stylesheet" href="global.css" />
   <link rel="stylesheet" href="Cart.css" />
+  <link rel="stylesheet" href="">
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,400;0,600;0,700;1,600&display=swap" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" />
@@ -58,7 +59,6 @@
               
               <div class="dish" id="dish">
                 <div class="dish-details">
-                  <img class="dish-icon" alt="" src="public/mask-group2@2x.png" />
                   <div class="dish-name">${item.name}</div>
                   <div class="dish-price">${item.price}</div>
                   <h3 class="price">${item.price}</h3>
@@ -107,79 +107,8 @@
 
 
   </script>
+
   <script src="cart_activity.js"></script>
 </body>
 
 </html>
-<!-- <div class="cart-item">
-  <div class="cart-item-name">${item.name}</div>
-  <div class="cart-item-price">${item.price}</div>
-  <button class="remove-item" data-index="${index}">Remove</button>
-</div> -->
-
-<!-- 
-
-
-<body>
-    <h1>Cart</h1>
-
-    <div id="cart-items">
-    </div>
-
-    <button class="clear-cart">Clear Cart</button>
-
-    <script>
-        const cartItemsContainer = document.getElementById('cart-items');
-
-        // Render the cart items
-        function renderCartItems() {
-            const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-            cartItemsContainer.innerHTML = '';
-
-            cartItems.forEach((item, index) => {
-                const cartItem = document.createElement('div');
-                cartItem.innerHTML = `
-            <div class="cart-item">
-              <div class="cart-item-name">${item.name}</div>
-              <div class="cart-item-price">${item.price}</div>
-              <button class="remove-item" data-index="${index}">Remove</button>
-            </div>
-          `;
-                cartItemsContainer.appendChild(cartItem);
-            });
-
-            // Remove the old event listeners before attaching new ones
-            const removeItemButtons = document.querySelectorAll('.remove-item');
-            removeItemButtons.forEach(removeItemButton => {
-                const index = removeItemButton.getAttribute('data-index');
-                removeItemButton.removeEventListener('click', removeCartItem);
-                removeItemButton.addEventListener('click', () => removeCartItem(index));
-            });
-        }
-
-        // Remove the item at the specified index from the cart and re-render the cart items
-        function removeCartItem(index) {
-            const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-            cartItems.splice(index, 1);
-            localStorage.setItem('cartItems', JSON.stringify(cartItems));
-            renderCartItems();
-        }
-
-        // Add a click event listener to the "Clear Cart" button
-        const clearCartButton = document.querySelector('.clear-cart');
-        clearCartButton.addEventListener('click', () => {
-            // Clear the cart items from local storage
-            localStorage.removeItem('cartItems');
-
-            // Remove all the cart items from the container
-            cartItemsContainer.innerHTML = '';
-        });
-
-        // Call the function to render the cart items
-        renderCartItems();
-    </script>
-</body>
-
-</html>
-
- -->

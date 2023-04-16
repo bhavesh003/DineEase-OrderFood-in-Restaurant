@@ -9,6 +9,8 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,400;0,600;0,700;1,600&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Roboto&display=swap">
 </head>
 
 <body>
@@ -16,8 +18,9 @@
     <div class="home-page">
 
         <i class="hotel-name">The Pune Hotel</i>
-        <img class="search-icon" alt="search icon" src="public/vector.png" id="vectorIcon1" />
-        <img class="cart-icon" alt="shopping cart icon" src="public/vector2.png" id="shoppingCart" />
+        <!-- <i class="fa fa-search search-icon" style="font-size: 30px;" aria-hidden="true" id="vectorIcon1"></i> -->
+        <i class="fa fa-shopping-cart fa-lg cart-icon" style="font-size: 40px;" id="shoppingCart"
+            aria-hidden="true"></i>
 
 
         <div class="nav-bar">
@@ -124,22 +127,7 @@
 
     </div>
 
-    <script>
-        var vectorIcon1 = document.getElementById("vectorIcon1");
-        if (vectorIcon1) {
-            vectorIcon1.addEventListener("click", function (e) {
-                window.location.href = "SearchResult.html";
-            });
-        }
-
-        var shoppingCart = document.getElementById("shoppingCart");
-        if (shoppingCart) {
-            shoppingCart.addEventListener("click", function (e) {
-                window.location.href = "Cart.html";
-            });
-        }
-
-    </script>
+    <script src="index.js"></script>
 </body>
 
 </html>
