@@ -35,23 +35,47 @@
     border: 0;
     padding: 10px;
     background-color: #80ed99;
-    /* color: ; */
     position: relative;
     border-radius: var(--br-11xl);
-    font-size: 20px;
-    width: 250px;
+    /* font-size: 20px; */
+    width: 123px;
     top: 57px;
     height: 25px;
     font-size: var(--font-size-xl);
     left: 77px;
     /* font-weight: 600; */
     border: 1px solid #80ed99;
+  } 
+
+  .clear-cart{
+    top: 65px;
+    cursor: pointer;
+    border: 0;
+    padding: 15px 15px 15px 15px;
+    background-color: #df6c6c;
+    position: relative;
+    border-radius: var(--font-size-xl);
+    font-size: bold;
+    left: 85px;
+    width: 83px;
+    height: 17px;
+    text-align: center;
+    overflow: hidden;
   }
 
   .back-icon {
     position: absolute;
     top: 30px;
     left: 41px;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+  }
+  
+  .trans-history{
+    position: absolute;
+    top: 30px;
+    left: 354px;
     width: 24px;
     height: 24px;
     overflow: hidden;
@@ -83,12 +107,21 @@
     position: relative;
     border: solid 1px #6e6969;
     /* top: 15px; */
-    left: 52px;
+    left: 40px;
     margin: 4px;
     border-radius: var(--br-11xl);
-    width: 308px;
-    height: 101px;
+    width: 335px;
+    height: 81px;
     background-color: rgb(248, 245, 245);
+  }
+
+  .remove-item{
+    position: absolute;
+    top: 9px;
+    left: 269px;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
   }
 
   .dish-icon {
@@ -104,46 +137,48 @@
   }
 
   .dish-name {
-    text-align: center;
+    text-align: left;
     position: absolute;
     top: 18px;
-    left: 93px;
+    left: 25px;
     line-height: 105.34%;
     font-weight: 126px;
-    width: 220px;
-    height: 40px;
+    width: 258px;
+    /* background-color: red; */
+    height: 22px;
   }
 
   .dish-price {
     text-align: start;
     position: absolute;
     top: 46px;
-    left: 128px;
+    left: 25px;
     font-size: var(--font-size-mid);
     color: var(--color-orangered);
-    width: 100px;
+    width: 92px;
     /* height: 18px; */
     /* background-color: black; */
   }
   .price{
     text-align: start;
     position: absolute;
-    top: 55px;
-    left: 128px;
+    top: 29px;
+    left: 120px;
     font-size: var(--font-size-mid);
     color: var(--color-orangered);
-    width: 100px;
+    width: 111px;
+    /* background-color: red; */
   }
 
   .b1,
   .b2,
   .b {
-    left: 95px;
+    left: 114px;
     background-color: #80ed99;
     border: none;
     color: black;
     position: relative;
-    top: 42px;
+    top: 44px;
   }
   .cart-foodmenusection {
     position: absolute;
@@ -173,7 +208,5 @@
     display: flex;
     flex-wrap: wrap;
   }
-  
-
 
 }

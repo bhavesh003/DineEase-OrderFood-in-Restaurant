@@ -1,0 +1,26 @@
+@media (max-width: 600px) {
+  body {
+    background-color: rgb(242, 242, 242);
+  }
+  .back-icon {
+    position: absolute;
+    top: 30px;
+    left: 41px;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+  }
+
+  .history {
+    position: absolute;
+    /* border-radius: var(--br-xl); */
+    /* height: 896px; */
+    width: 100%;
+    text-align: center;
+    align-content: center;
+    font-size: var(--font-size-mid);
+    color: var(--color-black);
+    font-family: var(--font-inter);
+    /* background-color: black; */
+  }
+}

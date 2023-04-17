@@ -18,18 +18,15 @@
 
     <div class="cart1">Cart</div>
     <img class="back-icon" alt="" id="back-icon" src="public/chevronleft.svg" />
-
+    <img class="trans-history" alt="" id="trans-history" src="public/trans-history.png" />
 
     <div class="cart-foodmenusection" id="cart-items">
 
-  
-
     </div>
-
-    <button class="clear-cart">Clear Cart</button>
 
     <div class="bottomsection">
       <div class="total-bill-rs total-price"></div>
+      <div class="clear-cart">Clear Cart</div>
       <button class="cart-child">Place Order</button>
     </div>
 
@@ -40,6 +37,13 @@
     if (dish) {
       dish.addEventListener("click", function (e) {
         window.location.href = "HomePage.html";
+      });
+    }
+
+    var dish = document.getElementById("trans-history");
+    if (dish) {
+      dish.addEventListener("click", function (e) {
+        window.location.href = "trans-history.html";
       });
     }
 
@@ -62,7 +66,8 @@
                   <div class="dish-name">${item.name}</div>
                   <div class="dish-price">${item.price}</div>
                   <h3 class="price">${item.price}</h3>
-                  
+
+                  <img class="remove-item" alt="" id="remove-item" src="public/bin.png" />
                   <i class="fa-duotone fa-trash" style="--fa-primary-color: #464444; --fa-primary-opacity: 0.6; --fa-secondary-color: #000000; --fa-secondary-opacity: 0.8; data-index="${index}"></i>
                 
                 </div>

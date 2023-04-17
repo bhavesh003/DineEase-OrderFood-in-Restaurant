@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="history">
+        <img class="back-icon" alt="" id="back-icon" src="public/chevronleft.svg" />
+    </div>
+    <h1>History</h1>
+
+    <script>
+        var dish = document.getElementById("back-icon");
+        if (dish) {
+            dish.addEventListener("click", function (e) {
+                window.location.href = "Cart.html";
+            });
+        }
+    </script>
+</body>
+
+</html>
