@@ -20,14 +20,12 @@
     <img class="back-icon" alt="" id="back-icon" src="public/chevronleft.svg" />
     <img class="trans-history" alt="" id="trans-history" src="public/trans-history.png" />
 
-    <div class="cart-foodmenusection" id="cart-items">
-
-    </div>
+    <div class="cart-foodmenusection" id="cart-items"></div>
 
     <div class="bottomsection">
       <div class="total-bill-rs total-price"></div>
       <div class="clear-cart">Clear Cart</div>
-      <button class="cart-child">Place Order</button>
+      <button class="place-order">Place Order</button>
     </div>
 
   </div>
@@ -67,8 +65,8 @@
                   <div class="dish-price">${item.price}</div>
                   <h3 class="price">${item.price}</h3>
 
-                  <img class="remove-item" alt="" id="remove-item" src="public/bin.png" />
-                  <i class="fa-duotone fa-trash" style="--fa-primary-color: #464444; --fa-primary-opacity: 0.6; --fa-secondary-color: #000000; --fa-secondary-opacity: 0.8; data-index="${index}"></i>
+                  <img class="remove-item" alt="" id="remove-item" data-index="${index}" src="public/bin.png" />
+                  
                 
                 </div>
                 <button class="b1 minus">-</button>
@@ -97,6 +95,23 @@
       renderCartItems();
     }
 
+    // Update the cart item at the specified index in the cart and re-render the cart items
+    function updateCartItem(index, item) {
+      const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+      cartItems[index] = item;
+      localStorage.setItem('cartItems', JSON.stringify(cartItems));
+      renderCartItems();
+    }
+
+    // Calculate and display the total price of the cart items
+    function updateCartTotal(cartItems) {
+      let total = 0;
+      cartItems.forEach(item => {
+        total += item.price * item.quantity;
+      });
+      cartTotalPrice.textContent = '$' + total.toFixed(2);
+    }
+
     // Add a click event listener to the "Clear Cart" button
     const clearCartButton = document.querySelector('.clear-cart');
     clearCartButton.addEventListener('click', () => {
@@ -110,6 +125,71 @@
     // Call the function to render the cart items
     renderCartItems();
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // Get all the "Add to Cart" buttons
+    const addToCartHistory = document.querySelectorAll('.place-order');
+
+    // Add a click event listener to each "Add to Cart" button
+    addToCartHistory.forEach(addToCartHistory => {
+      addToCartHistory.addEventListener('click', () => {
+        // Get the details of the dish
+        const DISHNAME = addToCartHistory.parentElement.querySelector('.dish-name').textContent;
+        const PRICE = addToCartHistory.parentElement.querySelector('.price').textContent;
+
+        // Create a new item object
+        const his = { n: DISHNAME, p: PRICE };
+
+        // Get the existing cart items from local storage
+        const transaction = JSON.parse(localStorage.getItem('transaction')) || [];
+
+        // Add the new item to the cart
+        transaction.push(his);
+
+
+        // Save the updated cart items to local storage
+        localStorage.setItem('transaction', JSON.stringify(transaction));
+      });
+    });
+
+    // Add a click event listener to the "View Cart" button
+    const viewCartHistory = document.querySelector('.trans-history');
+    viewCartHistory.addEventListener('click', () => {
+      window.location.href = 'trans-history.html';
+    });
 
   </script>
 

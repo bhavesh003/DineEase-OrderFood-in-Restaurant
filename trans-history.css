@@ -14,7 +14,7 @@
   .history {
     position: absolute;
     /* border-radius: var(--br-xl); */
-    /* height: 896px; */
+    height: 896px;
     width: 100%;
     text-align: center;
     align-content: center;
@@ -22,5 +22,22 @@
     color: var(--color-black);
     font-family: var(--font-inter);
     /* background-color: black; */
+  }
+
+  .cart-foodmenusection {
+    position: absolute;
+    margin: 15px;
+    left: -12px;
+    top: 58px;
+    width: 410px;
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    /* background-color: black; */
+    overflow-x: hidden;
+    overflow-y: scroll;
+    /* white-space: nowrap; */
+    /* z-index: 1; */
+    
   }
 }
