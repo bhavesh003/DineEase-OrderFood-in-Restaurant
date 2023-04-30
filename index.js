@@ -24,7 +24,7 @@ addToCartButtons.forEach(addToCartButton => {
         const dishPrice = addToCartButton.parentElement.querySelector('.dish-price').textContent;
 
         // Create a new item object
-        const item = { name: dishName, price: dishPrice};
+        const item = { name: dishName, price: dishPrice };
 
         // Get the existing cart items from local storage
         const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];

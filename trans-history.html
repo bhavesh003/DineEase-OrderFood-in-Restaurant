@@ -4,105 +4,53 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="global.css" />
-    <link rel="stylesheet" href="trans-history.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 
 <body>
-    <div class="history">
-        <img class="back-icon" alt="" id="back-icon" src="public/chevronleft.svg" />
-
-        <div class="cart-foodmenusection" id="his-items"> </div>
-
-
-
-    </div>
+    <h1>Cart History</h1>
+    <table id="history-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <button class="back-to-menu">Back to Menu</button>
 
     <script>
-        var dish = document.getElementById("back-icon");
-        if (dish) {
-            dish.addEventListener("click", function (e) {
-                window.location.href = "Cart.html";
-            });
-        }
+        // Add the item to the cart history
+        // Get the cart items from local storage
+        const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
 
+        // Get the table body element
+        const tableBody = document.querySelector('#history-table tbody');
 
-        const transactionContainer = document.getElementById('his-items');
-
-        // Render the cart items
-        function rendertransaction() {
-            const transaction = JSON.parse(localStorage.getItem('transaction')) || [];
-            transactionContainer.innerHTML = '';
-
-            transaction.forEach((item, index) => {
-                const transItems = document.createElement('div');
-                transItems.innerHTML = `
-
-            <div class="trans" id="trans">
-                <div class="dish-name">${his.n}</div>
-                <h3 class="price">${his.p}</h3>
-            </div>
-
-
-        `;
-                transactionContainer.appendChild(transItems);
-            });
-
-        }
-
-
-        // Remove the old event listeners before attaching new ones
-        const removeItemButtons = document.querySelectorAll('.remove-item');
-        removeItemButtons.forEach(removeItemButton => {
-            const index = removeItemButton.getAttribute('data-index');
-            removeItemButton.removeEventListener('click', removeCartItem);
-            removeItemButton.addEventListener('click', () => removeCartItem(index));
+        // Loop through the cart items and render them in the table
+        cartItems.forEach(item => {
+            const row = document.createElement('tr');
+            const nameCell = document.createElement('td');
+            nameCell.textContent = item.name;
+            const priceCell = document.createElement('td');
+            priceCell.textContent = item.price;
+            row.appendChild(nameCell);
+            row.appendChild(priceCell);
+            tableBody.appendChild(row);
         });
 
-        // Remove the item at the specified index from the cart and re-render the cart items
-        function removeCartItem(index) {
-            const transaction = JSON.parse(localStorage.getItem('transaction')) || [];
-            transaction.splice(index, 1);
-            localStorage.setItem('transaction', JSON.stringify(transaction));
-            rendertransaction();
-        }
-
-        // Update the cart item at the specified index in the cart and re-render the cart items
-        function updateCartItem(index, item) {
-            const transaction = JSON.parse(localStorage.getItem('transaction')) || [];
-            transaction[index] = item;
-            localStorage.setItem('transaction', JSON.stringify(transaction));
-            rendertransaction();
-        }
-
-        // Calculate and display the total price of the cart items
-        function updateCartTotal(transaction) {
-            let total = 0;
-            transaction.forEach(item => {
-                total += item.price * item.quantity;
-            });
-            cartTotalPrice.textContent = '$' + total.toFixed(2);
-        }
-
-        // Add a click event listener to the "Clear Cart" button
-        const clearCartButton = document.querySelector('.clear-cart');
-        clearCartButton.addEventListener('click', () => {
-            // Clear the cart items from local storage
-            localStorage.removeItem('transaction');
-
-            // Remove all the cart items from the container
-            transactionContainer.innerHTML = '';
+        // Add a click event listener to the "Back to Menu" button
+        const backToMenuButton = document.querySelector('.back-to-menu');
+        backToMenuButton.addEventListener('click', () => {
+            window.location.href = 'HomePage.html';
         });
-
-
-        // Call the function to render the cart items
-        rendertransaction();
 
 
     </script>
-    <script src="cart_activity.js"></script>
+
 </body>
 
 </html>
