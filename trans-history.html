@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cart History</title>
 </head>
 
 <body>
@@ -20,6 +20,7 @@
         <tbody>
         </tbody>
     </table>
+    <p>Total Price: <span class="total-price"></span></p>
     <button class="back-to-menu">Back to Menu</button>
 
     <script>
@@ -29,8 +30,10 @@
 
         // Get the table body element
         const tableBody = document.querySelector('#history-table tbody');
+        const totalPriceElement = document.querySelector('.total-price');
 
         // Loop through the cart items and render them in the table
+        let totalPrice = 0;
         cartItems.forEach(item => {
             const row = document.createElement('tr');
             const nameCell = document.createElement('td');
@@ -40,14 +43,19 @@
             row.appendChild(nameCell);
             row.appendChild(priceCell);
             tableBody.appendChild(row);
+
+            let itemPrice = parseInt(item.price.slice(3));
+            totalPrice += itemPrice;
         });
+
+        // Set the total price as text content
+        totalPriceElement.textContent = 'Rs ' + totalPrice;
 
         // Add a click event listener to the "Back to Menu" button
         const backToMenuButton = document.querySelector('.back-to-menu');
         backToMenuButton.addEventListener('click', () => {
             window.location.href = 'HomePage.html';
         });
-
 
     </script>
 
