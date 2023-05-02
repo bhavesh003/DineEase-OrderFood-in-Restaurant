@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>CHIEF VIEW</h1>
+    <table id="history-table">
+        <thead>
+            <tr>
+                <th>Order-</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <button class="back-to-menu">Back to Menu</button>
+
+    <script>
+        // Add the item to the cart history
+        // Get the cart items from local storage
+        const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+        // Get the table body element
+        const tableBody = document.querySelector('#history-table tbody');
+
+        // Loop through the cart items and render them in the table
+        cartItems.forEach(item => {
+            const row = document.createElement('tr');
+            const nameCell = document.createElement('td');
+            nameCell.textContent = item.name;
+
+            row.appendChild(nameCell);
+            tableBody.appendChild(row);
+        });
+
+        // Add a click event listener to the "Back to Menu" button
+        const backToMenuButton = document.querySelector('.back-to-menu');
+        backToMenuButton.addEventListener('click', () => {
+            window.location.href = 'HomePage.html';
+        });
+
+
+    </script>
+
+</body>
+
+</html>

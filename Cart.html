@@ -25,7 +25,7 @@
     <div class="bottomsection">
       <div class="total-bill-rs total-price"></div>
       <div class="clear-cart">Clear Cart</div>
-      <button class="place-order">Place Order</button>
+      <button class="place-order" id="place-order">Place Order</button>
     </div>
 
   </div>
@@ -44,7 +44,12 @@
         window.location.href = "trans-history.html";
       });
     }
-
+    var chief = document.getElementById("place-order");
+    if (chief) {
+      chief.addEventListener("click", function (e) {
+        window.location.href = "chief-view.html";
+      });
+    }
 
     const cartItemsContainer = document.getElementById('cart-items');
 
