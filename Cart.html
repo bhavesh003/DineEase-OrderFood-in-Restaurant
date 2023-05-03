@@ -23,14 +23,26 @@
     <div class="cart-foodmenusection" id="cart-items"></div>
 
     <div class="bottomsection">
-      <div class="total-bill-rs total-price"></div>
-      <div class="clear-cart">Clear Cart</div>
+
+      <div class="total-bill-rs total-price" id="button2" ></div>      
+      <div class="clear-cart" id="button1" onclick="clearTextField()">Clear Cart</div>
       <button class="place-order" id="place-order">Place Order</button>
     </div>
 
   </div>
 
   <script>
+
+    function clearTextField() {
+      const textField = document.getElementById("button1");
+      textField.value = "0";
+    }
+
+    function removePlaceholder() {
+      const button2 = document.getElementById("button2");
+      button2.removeAttribute("placeholder");
+    }
+
     var dish = document.getElementById("back-icon");
     if (dish) {
       dish.addEventListener("click", function (e) {
@@ -47,7 +59,7 @@
     var chief = document.getElementById("place-order");
     if (chief) {
       chief.addEventListener("click", function (e) {
-        window.location.href = "chief-view.html";
+        window.location.href = "new.html";
       });
     }
 
@@ -122,6 +134,7 @@
     clearCartButton.addEventListener('click', () => {
       // Clear the cart items from local storage
       localStorage.removeItem('cartItems');
+
 
       // Remove all the cart items from the container
       cartItemsContainer.innerHTML = '';

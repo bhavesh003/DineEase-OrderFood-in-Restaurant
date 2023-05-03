@@ -1,5 +1,4 @@
 @media (max-width: 600px) {
-  
 
   body{
     background-color: rgb(242, 242, 242);
@@ -81,8 +80,6 @@
     overflow: hidden;
   }
 
-  
-
   .cart {
     position: absolute;
     /* border-radius: var(--br-xl); */
@@ -98,7 +95,6 @@
 
   .dish-details {
     position: absolute;
-
     width: 195px;
     height: 262px;
   }
@@ -188,15 +184,15 @@
     width: 410px;
     height: 600px;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
     /* background-color: black; */
     overflow-x: hidden;
     overflow-y: scroll;
     /* white-space: nowrap; */
-    /* z-index: 1; */
-    
+    /* z-index: -1; */
   }
-
+  
   .bottomsection{
     /* background-color: blue; */
     position: fixed;
@@ -207,6 +203,43 @@
     height: 200px;
     display: flex;
     flex-wrap: wrap;
+  }
+
+  .history-table{
+    padding-left: 20px;
+    text-align: left;
+    position: absolute;
+    left: 30px;
+    top: 170px;
+    line-height: 40px;
+    width: 370px;
+    border-radius: 12px;
+    border: solid 1px black;
+    /* background-color: #b5e4e6; */
+  }
+
+  .tp{
+    justify-content: center;
+    /* margin-left: 50px; */
+    position: absolute;
+    top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    left: 90px;
+    font-size: 20px;
+    width: 250px;
+    border-radius: 12px;
+    border: solid 1px black;
+    /* background-color: #e1c0c0; */
+  }
+
+  .cart2 {
+    position: absolute;
+    text-align: left;
+    top: 30px;
+    left: 155px;
+    font-size: var(--font-size-lg);
+    font-weight: 500;
   }
 
 }

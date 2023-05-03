@@ -1,0 +1,32 @@
+h1{
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h2{
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+table{
+    margin-left: 150px;
+    /* padding: 50px; */
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 200px;
+}
+th{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+    background-color: rgb(255, 255, 255);
+}
+tr{
+    border-collapse: collapse;
+    padding: 5px;
+    background-color: rgb(255, 255, 255);
+}

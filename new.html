@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="Cart.css" />
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,400;0,600;0,700;1,600&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" />
+</head>
+
+<body>
+
+    <div class="cart">
+        <!-- <div class="cart1">Cart</div> -->
+        <img class="back-icon" alt="" id="back-icon" src="public/chevronleft.svg" />
+        <br><br><br><br><br><br>
+        <h1>Thank You for Order</h1>
+    </div>
+    <script>
+        var dish = document.getElementById("back-icon");
+    if (dish) {
+      dish.addEventListener("click", function (e) {
+        window.location.href = "HomePage.html";
+      });
+    }
+
+    </script>
+</body>
+
+</html>
