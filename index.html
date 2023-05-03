@@ -30,14 +30,22 @@
     <b class="login1" id="loginText1">Login</b> -->
     
     <div class="tables">
-      <button class="tableno" id="t1">Table 1</button>
+      <!-- <button class="tableno" id="t1">Table 1</button>
       <button class="tableno" id="t2">Table 2</button>
       <button class="tableno" id="t3">Table 3</button>
-      <button class="tableno" id="t4">Table 4</button>
+      <button class="tableno" id="t4">Table 4</button> -->
+      <button id="of">Order Food</button>
     </div>
   </div>
 
   <script>
+
+    var rectangleButton = document.getElementById("of");
+    if (rectangleButton) {
+      rectangleButton.addEventListener("click", function (e) {
+        window.location.href = "HomePage.html";
+      });
+    }
 
     var rectangleButton = document.getElementById("t1");
     if (rectangleButton) {
