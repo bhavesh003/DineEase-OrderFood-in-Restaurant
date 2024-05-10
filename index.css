@@ -5,8 +5,8 @@
     top: 20px;
     left: 35px;
     border-radius: 191px;
-    /* width: 313px; */
-    /* height: 309px; */
+    width: 313px;
+    height: 309px;
     object-fit: cover;
   }
   .login {
@@ -106,6 +106,7 @@
     align-items: center;
     appearance: none;
     background-color: #fff;
+    font-weight: 20px;
     border-radius: 24px;
     border-style: none;
     box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px,
@@ -138,7 +139,7 @@
     z-index: 0;
   }
 
-  /* .order-food:hover {
+.order-food:hover {
   background: #F6F9FE;
   color: #174ea6;
 }
@@ -171,5 +172,5 @@
 
 .order-food:disabled {
   box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
-} */
+}
 }

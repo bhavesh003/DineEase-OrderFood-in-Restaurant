@@ -14,81 +14,73 @@
 
 <body>
   <div class="login-page">
-    <!-- <img class="login-page-child" alt="" src="./public/rectangle-3@2x.png" />
+    <img class="login-page-child" alt="" src="./public/rectangle-3@2x.png" />
     <div class="login">Login</div>
     
+    <!-- Input fields for mobile number and OTP -->
     <div class="login-page-item"></div>
-    <input class="login-page-inner" type="number" min="{10}" max="{10}" required />
-
-
+    <input class="login-page-inner" type="number" placeholder="Enter Mobile Number" min="{10}" max="{10}" required />
     <h2 class="mobile-number">Mobile Number</h2>
     
-    <input class="frame-input" type="number" max="{4}" required />
-    
+    <input class="frame-input" type="number" placeholder="Enter 4 digit OTP" max="{4}" required />
     <div class="otp">OTP</div>
     
-    <button class="rectangle-button" id="rectangleButton"></button>
-    <b class="login1" id="loginText1">Login</b> -->
-    
-    <div class="tables">
-      <!-- <button class="tableno" id="t1">Table 1</button>
-      <button class="tableno" id="t2">Table 2</button>
-      <button class="tableno" id="t3">Table 3</button>
-      <button class="tableno" id="t4">Table 4</button> -->
-      <button class="order-food" id="of">Order Food</button>
-    </div>
+    <!-- Login button -->
+    <button class="rectangle-button" id="rectangleButton" disabled>Login</button>
   </div>
 
   <script>
-
-    var rectangleButton = document.getElementById("of");
-    if (rectangleButton) {
-      rectangleButton.addEventListener("click", function (e) {
-        window.location.href = "HomePage.html";
-      });
-    }
-
-    var rectangleButton = document.getElementById("t1");
-    if (rectangleButton) {
-      rectangleButton.addEventListener("click", function (e) {
-        window.location.href = "table/t1.html";
-      });
-    }
-
-    var rectangleButton = document.getElementById("t2");
-    if (rectangleButton) {
-      rectangleButton.addEventListener("click", function (e) {
-        window.location.href = "table/t2.html";
-      });
-    }
-
-    var rectangleButton = document.getElementById("t3");
-    if (rectangleButton) {
-      rectangleButton.addEventListener("click", function (e) {
-        window.location.href = "table/t3.html";
-      });
-    }
-
-    var rectangleButton = document.getElementById("t4");
-    if (rectangleButton) {
-      rectangleButton.addEventListener("click", function (e) {
-        window.location.href = "table/t4.html";
-      });
-    }
-
+    // Get the input fields and login button
+    var mobileNumberInput = document.querySelector('.login-page-inner');
+    var otpInput = document.querySelector('.frame-input');
     var rectangleButton = document.getElementById("rectangleButton");
-    if (rectangleButton) {
-      rectangleButton.addEventListener("click", function (e) {
-        window.location.href = "HomePage.html";
-      });
+
+    // Function to validate mobile number (you can adjust the validation logic as needed)
+    function isValidMobileNumber(number) {
+      // Check if the number has exactly 10 digits
+      return /^\d{10}$/.test(number);
     }
 
-    var loginText1 = document.getElementById("loginText1");
-    if (loginText1) {
-      loginText1.addEventListener("click", function (e) {
-        window.location.href = "HomePage.html";
-      });
+    // Function to validate OTP (you can adjust the validation logic as needed)
+    function isValidOTP(otp) {
+      // Check if the OTP has exactly 4 digits
+      return /^\d{4}$/.test(otp);
     }
+
+    // Function to enable or disable login button based on input validity
+    function updateLoginButton() {
+      if (isValidMobileNumber(mobileNumberInput.value) && isValidOTP(otpInput.value)) {
+        rectangleButton.disabled = false;
+      } else {
+        rectangleButton.disabled = true;
+      }
+    }
+
+    // Function to show alert for wrong mobile number or OTP
+    function showAlert(message) {
+      console.log("Showing alert:", message); // Log the message to the console for debugging
+      alert(message);
+    }
+
+    // Event listeners for input fields to update login button status
+    mobileNumberInput.addEventListener('input', updateLoginButton);
+    otpInput.addEventListener('input', updateLoginButton);
+
+    // Event listener for login button click
+    rectangleButton.addEventListener("click", function (e) {
+      // Prevent the default form submission behavior
+      e.preventDefault();
+
+      // Validate mobile number and OTP before redirecting
+      if (!isValidMobileNumber(mobileNumberInput.value)) {
+        showAlert("Please enter a valid mobile number.");
+      } else if (!isValidOTP(otpInput.value)) {
+        showAlert("Please enter a valid OTP.");
+      } else {
+        // Redirect to HomePage.html
+        window.location.href = "HomePage.html";
+      }
+    });
   </script>
 </body>
 
