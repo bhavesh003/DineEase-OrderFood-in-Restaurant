@@ -41,3 +41,4 @@ Customers can scan our QR placed on the table. It will redirect to a website whe
 - **Customer Satisfaction:** Enhances the dining experience with quick and easy ordering.
 - **Transparency:** Provides clear and detailed billing, reducing the chance of disputes.
 
+#### Link: https://bhavesh003.github.io/DineEase/
